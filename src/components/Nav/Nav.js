@@ -3,11 +3,12 @@ import Col from "../Bootstrap/Col";
 import Container from "../Bootstrap/Container";
 import Row from "../Bootstrap/Row";
 
-const Nav = () =>
+
+const Nav = ({score, message, highScore})=>
   <nav className="navbar navbar-inverse navbar-top" style={{height: 110}}>
     <Container>
       <Row>
-      <Col size='lg-4'>
+      <Col size='lg-3'>
       <ul>
       <div className="navbar-header">
         <button type="button" className="collapsed navbar-toggle">
@@ -21,12 +22,17 @@ const Nav = () =>
       </div>
       </ul>
       </Col>
-      <Col size='lg-4'>
-      <a className="navbar-brand Message"><h3>Placeholder for message</h3></a>
+      <Col size='lg-3'>
+      <a className="navbar-brand Message"><h3>{message}</h3></a>
       </Col>
-      <Col size='lg-4'>
+      <Col size='lg-3'>
       <a className="navbar-brand Score">
-      <h3>Placeholder for Score</h3>
+      <h3>Score: {score}</h3>
+      </a>
+      </Col>
+      <Col size='lg-3'>
+      <a className="navbar-brand highScore">
+      <h3>High Score: {highScore}</h3>
       </a>
       </Col>
       </Row>
