@@ -10,14 +10,16 @@
 
 .card > .img-container {
   height: 170px;
+  width: 170px;
   overflow: hidden;
   background:#6CADDC;
 }
 .card > .img-container > img {
   width: 170px;
+  height: 170px;
 }
 
-.card > .remove {
+.card > .shuffle {
   color: #ff1744;
   position: absolute;
   top: -20px;
@@ -25,6 +27,6 @@
   cursor: pointer;
 }
 
-.card > .remove:hover {
+.card > .shuffle:hover {
   color: #d50000;
 }

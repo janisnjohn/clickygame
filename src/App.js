@@ -16,7 +16,7 @@ class App extends Component {
     score: 0,
     highScore: 0,
     clickCards: [],
-    message: "",
+    message: "Click and Image to Begin",
   }
 
   shuffle(id) {
@@ -40,13 +40,22 @@ class App extends Component {
         friends:array, 
         clickCards:[id, ...this.state.clickCards], 
         score:this.state.score+1, 
-        message:"You Are Correct",
+        message:"You Guessed Correctly",
       });
     } else {
         if(this.state.score > this.state.highScore) {
-        this.setState({message: "You Lost", score: 0, highScore:this.state.score});
+        this.setState({
+          message: "You Guessed Wrong", 
+          score: 0, 
+          highScore:this.state.score, 
+          clickCards:[],
+        });
         } else {
-        this.setState({message: "You Lost", score: 0});
+        this.setState({
+          message: "You Guessed Wrong", 
+          score: 0, 
+          clickCards:[],
+        });
         }
       }
   }
